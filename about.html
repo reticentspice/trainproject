@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train vs Car</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body class="toggle-dark">
+    <header>
+        <img id="train-vs-car" src="trainvscar.jpg">
+        <h1>Train vs Car</h1>
+        <a href="index.html" class="page-link button">Main</a>
+        <button class="button dark-mode-button" id="dark-mode">Dark Mode</button>
+    </header>
+    <main>
+        <br>
+        <p class="text-element about">Train vs Car lets you find the average time it takes to move between two British
+            train
+            stations by car or
+            by train. Select your departure and arrival stations from the dropdown menus, then click on "Find Transit
+            Route" and then "Find Driving Route" to see how long it takes by each method of transit.
+        </p>
+        <br>
+        <p class="text-element about">Please note that this page uses the Google Maps API and, although it
+            has been told to prefer trains (plus subway), I can't prevent it from occasionally using
+            buses or trams instead.
+        </p>
+        <br>
+        <p class="text-element about">When used here, Google's API returns the average time it takes to make
+            that journey rather than the time at the specific moment you search.
+        </p>
+        <br>
+    </main>
+</body>
+<footer>
+    <p class="text-element" id="attribution">Created by Laura Kingdon, 2023</p>
+    <script src="aboutScript.js" type="module"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</footer>
+
+</html>

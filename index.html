@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train vs Car</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body class="toggle-dark">
+    <header>
+        <img id="train-vs-car" src="trainvscar.jpg" alt="Picture of a train racing a car">
+        <h1>Train vs Car</h1>
+        <a href="about.html" class="page-link button">About</a>
+        <button id="dark-mode" class="button dark-mode-button">Dark Mode</button>
+    </header>
+    <main class="responsive">
+        <div id="station-input" class="main-div">
+            <label for="departure-name" class="text-element scroll-label" id="departure-label">Choose your
+                departure station:</label>
+            <select class="scroll-links" id="departure-name">
+                <option>Select a station</option>
+            </select>
+            <br>
+            <label for="arrival-name" class="text-element scroll-label" id="arrival-label">Choose your arrival
+                station:</label>
+            <select class="scroll-links" id="arrival-name">
+                <option>Select a station</option>
+            </select>
+            <br>
+            <div id="button-container">
+                <button class="button" id="transit-button">Find Transit Route</button>
+                <button class="button" id="driving-button">Find Driving Route</button>
+            </div>
+            <p id="error-message" class="text-element"></p>
+            <br>
+        </div>
+        <div id="results-grid" class="main-div">
+            <p class="time-label text-element" id="train-label">By train: </p>
+            <p class="time text-element" id="transit-time">
+            </p>
+            <p class="time-label text-element" id="drive-label">By car: </p>
+            <p class="time text-element" id="drive-time"></p>
+            <img class="image" id="train-image" src="trainmedal.png" alt="Picture of a car with a gold medal">
+            <img class="image" id="car-image" src="carmedal.png" alt="Picture of a car with a gold medal">
+        </div>
+
+        <div id="map" class="main-div">
+
+        </div>
+    </main>
+</body>
+<footer>
+    <script src="script.js" type="module"></script>
+    <script src="stationlist.js" type="module"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLFq0RBepDixov9182l944pqkyEaWQEEw&libraries=places&callback=initMap"></script>
+</footer>
+
+</html>
