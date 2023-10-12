@@ -125,7 +125,7 @@ footer {
     width: 33%;
     /*The map won't display if this isn't specified here, for some reason.*/
     aspect-ratio: 1;
-    max-height: 400px;
+    max-height: 450px;
     margin: 10px;
     position: relative;
 }
