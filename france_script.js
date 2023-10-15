@@ -7,7 +7,7 @@
 //7. Dark mode
 
 //Get the list of station names from another file.
-import { stationNames } from "./stationlist.js";
+import { stationNames } from "./french_stationlist.js";
 
 //These need to be set as global variables to be accessed later on in findWinner.
 let transitDuration;
@@ -39,10 +39,10 @@ getArrivalStations();
 function initMap() {
     var directionsRenderer = new google.maps.DirectionsRenderer();
     var directionsService = new google.maps.DirectionsService();
-    var unitedKingdom = new google.maps.LatLng(54.483959, -2.244644);
+    var france = new google.maps.LatLng(47.081278, 2.397607);
     var mapOptions = {
         zoom: 5,
-        center: unitedKingdom,
+        center: france,
         disableDefaultUI: true,
         zoomControl: true
     }

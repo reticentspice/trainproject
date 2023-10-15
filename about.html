@@ -13,16 +13,17 @@
     <header>
         <img id="train-vs-car" src="trainvscar.jpg">
         <h1>Train vs Car</h1>
-        <a href="index.html" class="page-link button">Main</a>
-        <button class="button dark-mode-button" id="dark-mode">Dark Mode</button>
+        <a href="index.html" class="page-link button small-button" id="top-left-button">UK</a>
+        <button id="dark-mode" class="button small-button">Dark Mode</button>
+        <a href="france.html" class="page-link button small-button" id="left-button">France</a>
+        <a href="germany.html" class="page-link button small-button" id="right-button">Germany</a>
     </header>
     <main>
         <br>
-        <p class="text-element about">Train vs Car lets you find the average time it takes to move between two British
-            train
-            stations by car or
-            by train. Select your departure and arrival stations from the dropdown menus, then click on "Find Transit
-            Route" and then "Find Driving Route" to see how long it takes by each method of transit.
+        <p class="text-element about">Train vs Car lets you find the average time it takes to move between two train
+            stations in the UK, France, or Germany by car or by train. Select your departure and arrival stations from
+            the dropdown menus, then click on "Find Transit Route" and then "Find Driving Route" to see how long
+            it takes by each method of transit.
         </p>
         <br>
         <p class="text-element about">Please note that this page uses the Google Maps API and, although it
@@ -30,14 +31,15 @@
             buses or trams instead.
         </p>
         <br>
-        <p class="text-element about">When used here, Google's API returns the average time it takes to make
-            that journey rather than the time at the specific moment you search.
+        <p class="text-element about">When used here, Google's API returns the time it takes to make the journey in
+            question at the time of the search. Results may vary depending on whether you're searching, for example,
+            at 9 AM Monday morning or 11 PM Sunday night.
         </p>
         <br>
     </main>
 </body>
 <footer>
-    <p class="text-element" id="attribution">Created by Laura Kingdon, 2023</p>
+    <p id="attribution">Created by Laura Kingdon, 2023</p>
     <script src="aboutScript.js" type="module"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </footer>
