@@ -6,13 +6,16 @@
 //6. findWinner
 //7. Dark mode
 
+//1. Import
 //Get the list of station names from another file.
 import { stationNames } from "./stationlist.js";
 
+//2. Set up global variables
 //These need to be set as global variables to be accessed later on in findWinner.
 let transitDuration;
 let drivingDuration;
 
+//3. getDepartureStations/ArrivalStations
 //Set up functions to create the lists of station names.
 function getDepartureStations() {
     for (let i = 0; i < stationNames.length; i++) {
@@ -35,6 +38,7 @@ function getArrivalStations() {
 getDepartureStations();
 getArrivalStations();
 
+//4. initMap
 //Initialize the map.
 function initMap() {
     var directionsRenderer = new google.maps.DirectionsRenderer();
@@ -57,6 +61,7 @@ function initMap() {
     })
 }
 
+//5. calcTransit/DrivingRoute
 //Calculate the transit and driving routes and times.
 function calcTransitRoute(directionsService, directionsRenderer) {
     //Get values from dropdowns
@@ -178,6 +183,7 @@ function calcDrivingRoute(directionsService, directionsRenderer) {
     }
 }
 
+//6. findWinner
 //Display a picture showing which method of transit was fastest.
 function findWinner() {
     if (transitDuration < drivingDuration) {
@@ -188,6 +194,7 @@ function findWinner() {
     }
 }
 
+//7. Dark mode
 //Set up dark mode.
 $("#dark-mode").on("click", function () {
     if ($(".toggle-dark").css("background-color") === "rgb(255, 255, 255)") {
