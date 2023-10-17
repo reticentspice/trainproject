@@ -5,6 +5,7 @@ IDs
 results-grid IDs and class
 @media queries*/
 
+/*Elements*/
 * {
     padding: 0;
     margin: 0;
@@ -40,6 +41,7 @@ footer {
     width: 100%;
 }
 
+/*Classes*/
 .about {
     margin: 10px;
     font-size: 16px !important;
@@ -64,9 +66,14 @@ footer {
     cursor: pointer;
 }
 
+.flag-img {
+    height: 10px;
+}
+
 .main-div {
     width: 33%;
-    height: 90%;
+    height: 80%;
+    margin: 10px;
 }
 
 .responsive {
@@ -116,6 +123,7 @@ footer {
     display: none;
 }
 
+/*IDs*/
 #top-left-button {
     right: 110px;
     top: 10px;
@@ -155,10 +163,11 @@ footer {
 #map {
     width: 33%;
     /*The map won't display if the width isn't specified here, for some reason.*/
-    aspect-ratio: 1;
-    margin: 10px;
+    height: 300px;
     border: 2px solid #003366;
     border-radius: 8px;
+    margin: 10px;
+
 }
 
 #station-input {
@@ -167,7 +176,7 @@ footer {
     align-items: center;
     text-align: center;
     padding: 10px;
-    gap: 20px;
+    gap: 10px;
     margin-top: 20px;
 }
 
@@ -177,11 +186,12 @@ footer {
     padding: 0px;
 }
 
+/*results-grid IDs and class*/
 #results-grid {
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 10px;
     justify-items: center;
     text-align: center;
     padding: 20px 10px 10px 10px;
@@ -213,8 +223,10 @@ footer {
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: span 2;
+    max-height: 300px;
 }
 
+/*@media queries*/
 @media (max-width: 700px) {
 
     header,
@@ -228,20 +240,36 @@ footer {
         top: 5px;
     }
 
-    .dark-mode-button {
-        right: 8px;
-        top: 8px;
+    .small-button {
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
     }
 
-    #about-page {
-        right: 103px;
-        top: 8px;
+    #top-left-button {
+        right: 99px;
+        top: 4px;
+    }
+
+    #dark-mode {
+        right: 4px;
+        top: 4px;
+    }
+
+    #left-button {
+        right: 99px;
+        top: 26px;
+    }
+
+    #right-button {
+        right: 4px;
+        top: 26px;
     }
 
     .main-div {
         width: 80%;
         min-height: 180px;
-        max-height: 400px;
+        max-height: 450px;
     }
 
     .responsive {
@@ -251,12 +279,15 @@ footer {
 
     #map {
         width: 80%;
-        /*The below currently fixes the footer issue but causes overlap with results-grid instead.*/
         bottom: 60px;
     }
 
     #results-grid {
         gap: 10px;
+    }
+
+    .image {
+        margin-bottom: 20px;
     }
 
     #station-input {
