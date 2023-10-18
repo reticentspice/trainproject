@@ -1,4 +1,4 @@
-export const stationNames = ["Abancourt",
+export const frenchStationNames = ["Abancourt",
     "Abbaretz",
     "Abbeville",
     "Ablon-sur-Seine",

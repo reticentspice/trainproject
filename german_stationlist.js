@@ -1,4 +1,4 @@
-export const stationNames = ["Aachen Hbf",
+export const germanStationNames = ["Aachen Hbf",
     "Aachen Schanz",
     "Aachen West",
     "Aachen-Rothe Erde",

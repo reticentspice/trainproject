@@ -17,15 +17,19 @@
     <header>
         <img id="train-vs-car" src="trainvscar.jpg" alt="Picture of a train racing a car">
         <h1>Train vs Car</h1>
-        <a href="about.html" class="button small-button" id="top-left-button">About</a>
         <button id="dark-mode" class="button small-button">Dark Mode</button>
-        <a href="france.html" class="button small-button" id="left-button"><img src="frenchflag.png" class="flag-img">
-            France</a>
-        <a href="germany.html" class="button small-button" id="right-button"><img src="germanflag.png" class="flag-img">
-            Germany</a>
+        <button class="button small-button" id="reset">Reset</button>
+
     </header>
     <main class="responsive">
-
+        <div id="country-button-container">
+            <button class="button country-button" id="united-kingdom"><img src="ukflag.png" class="flag-img"><br>United
+                Kingdom</button>
+            <button class="button country-button" id="france"><img src="frenchflag.png" class="flag-img"><br>
+                France</button>
+            <button class="button country-button" id="germany"><img src="germanflag.png" class="flag-img"><br>
+                Germany</button>
+        </div>
         <div id="station-input" class="main-div">
 
             <label for="departure-name" class="text-element scroll-label" id="departure-label">Choose your
@@ -67,8 +71,11 @@
 
 <footer>
     <p id="attribution">Created by Laura Kingdon, 2023</p>
+    <a href="about.html" class="button small-button" id="about-button">About</a>
     <script src="script.js" type="module"></script>
     <script src="stationlist.js" type="module"></script>
+    <script src="french_stationlist.js" type="module"></script>
+    <script src="german_stationlist.js" type="module"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLFq0RBepDixov9182l944pqkyEaWQEEw&libraries=places&callback=initMap"></script>

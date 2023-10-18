@@ -66,8 +66,18 @@ footer {
     cursor: pointer;
 }
 
+.country-button {
+    height: 80px;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
 .flag-img {
-    height: 10px;
+    height: 20px;
 }
 
 .main-div {
@@ -124,9 +134,9 @@ footer {
 }
 
 /*IDs*/
-#top-left-button {
-    right: 110px;
-    top: 10px;
+#about-button {
+    right: 10px;
+    top: 8px;
 }
 
 #attribution {
@@ -143,6 +153,15 @@ footer {
     column-gap: 20px;
 }
 
+#country-button-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    margin: auto;
+    position: relative;
+    top: 50px;
+}
+
 #dark-mode {
     position: absolute;
     right: 10px;
@@ -150,14 +169,14 @@ footer {
     text-align: center;
 }
 
-#left-button {
-    right: 110px;
+#reset {
+    right: 10px;
     top: 40px;
 }
 
-#right-button {
-    right: 10px;
-    top: 40px;
+#main-button {
+    right: 110px;
+    top: 10px;
 }
 
 #map {
@@ -246,8 +265,8 @@ footer {
         line-height: 20px;
     }
 
-    #top-left-button {
-        right: 99px;
+    #about-button {
+        right: 4px;
         top: 4px;
     }
 
@@ -256,14 +275,14 @@ footer {
         top: 4px;
     }
 
-    #left-button {
-        right: 99px;
-        top: 26px;
+    #main-button {
+        top: 34px;
+        right: 4px;
     }
 
-    #right-button {
+    #reset {
         right: 4px;
-        top: 26px;
+        top: 27px;
     }
 
     .main-div {

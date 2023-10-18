@@ -1,4 +1,4 @@
-export const stationNames = ["Abbey Wood",
+export const ukStationNames = ["Abbey Wood",
     "Aber",
     "Abercynon",
     "Aberdare",

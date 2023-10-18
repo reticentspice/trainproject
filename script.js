@@ -2,18 +2,24 @@
 //2. Set up global variables
 //3. getDepartureStations/ArrivalStations
 //4. initMap
-//5. calcTransit/DrivingRoute
-//6. findWinner
-//7. Dark mode
+//5. country.on("click")
+//6. Reset button
+//7. calcTransit/DrivingRoute
+//8. findWinner
+//9. Dark mode
 
 //1. Import
 //Get the list of station names from another file.
-import { stationNames } from "./stationlist.js";
+import { ukStationNames } from "./stationlist.js";
+import { frenchStationNames } from "./french_stationlist.js";
+import { germanStationNames } from "./german_stationlist.js";
 
 //2. Set up global variables
 //These need to be set as global variables to be accessed later on in findWinner.
 let transitDuration;
 let drivingDuration;
+let stationNames;
+let map;
 
 //3. getDepartureStations/ArrivalStations
 //Set up functions to create the lists of station names.
@@ -35,9 +41,6 @@ function getArrivalStations() {
     }
 }
 
-getDepartureStations();
-getArrivalStations();
-
 //4. initMap
 //Initialize the map.
 function initMap() {
@@ -50,7 +53,7 @@ function initMap() {
         disableDefaultUI: true,
         zoomControl: true
     }
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     directionsRenderer.setMap(map);
     $("#transit-button").on("click", function () {
@@ -61,7 +64,40 @@ function initMap() {
     })
 }
 
-//5. calcTransit/DrivingRoute
+//5. country.on("click")
+// Function to set parameters depending on which country the user chooses.
+$("#united-kingdom").on("click", function () {
+    stationNames = ukStationNames;
+    getDepartureStations();
+    getArrivalStations();
+    $(".country-button").hide();
+    $(".main-div").show();
+})
+
+$("#france").on("click", function () {
+    stationNames = frenchStationNames;
+    map.setCenter(new google.maps.LatLng(47.081278, 2.397607));
+    getDepartureStations();
+    getArrivalStations();
+    $(".country-button").hide();
+    $(".main-div").show();
+})
+
+$("#germany").on("click", function () {
+    stationNames = germanStationNames;
+    map.setCenter(new google.maps.LatLng(51.575265, 9.924643));
+    getDepartureStations();
+    getArrivalStations();
+    $(".country-button").hide();
+    $(".main-div").show();
+})
+
+//6. Reset button
+$("#reset").on("click", function () {
+    location.reload(true);
+})
+
+//7. calcTransit/DrivingRoute
 //Calculate the transit and driving routes and times.
 function calcTransitRoute(directionsService, directionsRenderer) {
     //Get values from dropdowns
@@ -183,7 +219,7 @@ function calcDrivingRoute(directionsService, directionsRenderer) {
     }
 }
 
-//6. findWinner
+//8. findWinner
 //Display a picture showing which method of transit was fastest.
 function findWinner() {
     if (transitDuration < drivingDuration) {
@@ -194,7 +230,7 @@ function findWinner() {
     }
 }
 
-//7. Dark mode
+//9. Dark mode
 //Set up dark mode.
 $("#dark-mode").on("click", function () {
     if ($(".toggle-dark").css("background-color") === "rgb(255, 255, 255)") {
@@ -211,3 +247,5 @@ $("#dark-mode").on("click", function () {
 
 //Ensure the map is initialized when the window loads.
 window.initMap = initMap;
+//Hide the main page when the window loads so only the selection buttons are visible.
+window.onload = $(".main-div").hide();
