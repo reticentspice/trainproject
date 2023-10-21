@@ -12,7 +12,7 @@ another API to process user input) with input fields so the project could compar
 Other future goals include adding cookies so the Dark Mode settings are saved; possibly adding more settings which could also be saved as cookies; and writing a 
 script which will iterate through all the station lists, check them against Google Maps, and return the ones that result in errors so I can manually check and
 correct them. The project currently finds the station location by adding "station" to the entry in the list, but this doesn't work for all stations; rural French
-stations seem to be a particular problem. I also need different pictures of the train and car.
+stations seem to be a particular problem.
 
 How to use the project:
 Visit https://reticentspice.github.io/trainproject and use it there. The API key won't work anywhere else.
